@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.corpo{
+    background-image: linear-gradient(blue, #3db0f7, #87ceeb, white);
+}
+
+.corpo{
+    position: relative;
+    max-width: 1500px;
+    max-height: 700px;
+    width: 100%;
+    height: 100vh;
+    border-bottom: 30px solid green;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.pontuacao{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    padding: 10px;
+    z-index: 100000;
+    background-color: green;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+.pontuacao span{
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+}
+
+img{
+    position: absolute;
+}
+
+.corpo .cloud{
+    width: 500px;
+    top: 20px;
+    animation: clouds-move 20s linear infinite;
+}
+
+.corpo .mario{
+    width: 200px;
+    height: 200px;
+    bottom: -5px;
+    transform: scaleX(-1);
+}
+
+.initi-game{
+    animation: piper-move 2s linear infinite;
+}
+
+.jump{
+    animation: mario-jump 600ms linear;
+}
+
+.corpo .piper{
+    width: 140px;
+    height: 120px;
+    right: -100px;
+    bottom: 0;
+}
+
+@keyframes piper-move {
+    0%{
+        right: -100px;
+    }
+
+    100%{
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump{
+    0%{
+        bottom: 0;
+    }
+
+    30%{
+        bottom: 200px;
+    }
+
+    70%{
+        bottom: 200px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-move{
+    0%{
+        right: -500px;
+    }
+
+    100%{
+        right: 100%;
+    }
+}
+
+.manual{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+
+.manual h1{
+    font-size: 30px;
+}
+
+.manual p{
+    margin: 20px auto;
+}
+
+.comecar{
+    width: 90%;
+    max-width: 500px;
+    background-image: linear-gradient(blue, #3db0f7 ,#3db0f7 , blue);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
